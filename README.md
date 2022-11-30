@@ -11,6 +11,7 @@
    > # yarn
    > $ yarn create vite my-app --template react
    > ```
+<br />
 
 ### 2. Enter newly created app folder
    > ```shell
@@ -19,11 +20,13 @@
    > $ npm install
    > $ npm run dev
    > ```
+<br />
 
 ### 3. Install the `gh-pages` npm package
    > ```shell
    > $ npm install gh-pages --save-dev
    > ```
+<br />
 
 ### 4. Add a `homepage` property to the `package.json` file
    > ```diff
@@ -32,6 +35,7 @@
    >     "version": "0.1.0",
    > +   "homepage": "https://{username}.github.io/{repo-name}",
    > ```
+<br />
 
 ### 5. Add a `predeploy` property and a `deploy` property to the `scripts` object in the `package.json` file
    > ```diff
@@ -43,6 +47,7 @@
    > +   "deploy": "gh-pages -d dist"
    > }
    > ```
+<br />
 
 ### 6. Add `base` property to `vite.config.js` file
    > ```diff
@@ -51,11 +56,13 @@
    >     plugins: [react()]
    > })    
    > ```
+<br />
 
 ### 7. Add a "remote" that points to  the GitHub repository
    > ```shell
    > $ git remote add origin https://github.com/{username}/{repo-name}.git
    > ```
+<br />
 
 ### 8. Push the app to the GitHub repository
    > ```shell
@@ -65,6 +72,7 @@
    > # deploy with commit message
    > $ npm run deploy -- -m "some-commit-message"
    > ```
+<br />
 
 ### 9. Configure GitHub Pages
 1. Navigate to the **GitHub Pages** settings page
@@ -77,3 +85,7 @@
       - Branch: `gh-pages`
       - Folder: `/ (root)`
 1. Click on the "Save" button
+
+**That's it!** The app has been deployed to GitHub Pages!
+
+At this point, the React app is accessible to anyone who visits the `homepage` URL you specified earlier
